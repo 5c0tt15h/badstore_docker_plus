@@ -65,6 +65,7 @@ RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 WORKDIR /var/www/html
 
 EXPOSE 80
+EXPOSE 3306
 
 # copy supervisor conf
 ADD supervisor/conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
