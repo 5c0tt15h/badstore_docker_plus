@@ -46,6 +46,7 @@ RUN mkdir -p /data/mariadb/bin && \
 	mkdir -p /data/mariadb/log && \
 	mkdir -p /data/mariadb/run
 ADD mariadb/conf/my.cnf /data/mariadb/etc/my.cnf
+ADD mariadb/config/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 ADD mariadb/bin/mariadb-start.sh /data/mariadb/bin/mariadb-start.sh 
 ADD mariadb/bin/badstore-setup.sql /data/mariadb/bin/badstore-setup.sql
 RUN chmod u=rwx /data/mariadb/bin/mariadb-start.sh
