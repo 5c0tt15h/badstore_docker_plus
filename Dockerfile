@@ -26,6 +26,8 @@ RUN a2enmod ssl \
     touch /data/apache2/log/access.log && \
     touch /data/apache2/log/error.log && \
     chown -R www-data:www-data /data/apache2/log
+	chown nobody:nogroup /htdocs/index.html
+	chown nobody:nogroup /htdocs/index.bak
 #    ln -sf /dev/stdout /data/apache2/log/access.log && \
 #    ln -sf /dev/stderr /data/apache2/log/error.log
 
