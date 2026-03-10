@@ -25,9 +25,8 @@ RUN a2enmod ssl \
     mkdir -p /data/apache2/htdocs && \
     touch /data/apache2/log/access.log && \
     touch /data/apache2/log/error.log && \
-    chown -R www-data:www-data /data/apache2/log \
-	chown nobody:nogroup /htdocs/index.html \
-	chown nobody:nogroup /htdocs/index.bak
+    chown -R www-data:www-data /data/apache2/log
+
 #    ln -sf /dev/stdout /data/apache2/log/access.log && \
 #    ln -sf /dev/stderr /data/apache2/log/error.log
 
@@ -39,7 +38,8 @@ RUN chown www-data /data/apache2/data/guestbookdb
 RUN chown www-data /data/apache2/data/uploads
 RUN chown www-data /data/apache2/data/htdocs/DoingBusiness
 RUN chown www-data:mysql /data/apache2/htdocs/backup
-
+RUN chown nobody:nogroup /data/apache2/htdocs/index.html
+RUN	chown nobody:nogroup /data/apache2/htdocs/index.bak
 # Setup Mysql
 
 # These scripts will be used to launch MariaDB and configure it
