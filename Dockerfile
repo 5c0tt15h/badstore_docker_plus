@@ -40,6 +40,7 @@ RUN chown www-data /data/apache2/data/uploads
 RUN chown www-data:mysql /data/apache2/htdocs/backup
 RUN chown www-data /data/apache2/htdocs/index.html
 RUN	chown www-data /data/apache2/htdocs/index.bak
+RUN chown www-data /data/apache2/cgi-bin/test.cgi
 # Setup Mysql
 
 # These scripts will be used to launch MariaDB and configure it
