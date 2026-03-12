@@ -928,7 +928,7 @@ sub supupload
 	if ($referer and $referer !~ m|^http://$hostname/| ) {
 		print h1("Referer is: ");
 		print h1($referer);
-		print h1("$hostnamer);
+		print h1($hostname);
 		print h1("Upload a file");
 
 		$newfilename = $query->param('newfilename');
